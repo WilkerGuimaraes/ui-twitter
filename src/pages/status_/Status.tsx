@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, KeyboardEvent, useState } from "react";
 import { PaperPlaneRight } from "phosphor-react";
 
 import { StatusContainer } from "./Status.style";
@@ -23,6 +23,13 @@ export const Status = () => {
     setNewAnswer("");
   };
 
+  const handleHotKeySubmit = (event: KeyboardEvent) => {
+    if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
+      setAnswers([newAnswer, ...answers]);
+      setNewAnswer("");
+    }
+  };
+
   return (
     <StatusContainer>
       <Header title="Tweet" />
@@ -36,6 +43,7 @@ export const Status = () => {
             id="tweet"
             placeholder="Tweet your answer"
             value={newAnswer}
+            onKeyDown={handleHotKeySubmit}
             onChange={(event) => {
               setNewAnswer(event.target.value);
             }}

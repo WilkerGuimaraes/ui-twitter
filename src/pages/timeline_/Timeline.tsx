@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, KeyboardEvent, useState } from "react";
 
 import { TimelineContainer } from "./Timeline.style";
 
@@ -23,6 +23,13 @@ export const Timeline = () => {
     setNewTweet("");
   };
 
+  const handleHotKeySubmit = (event: KeyboardEvent) => {
+    if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
+      setTweets([newTweet, ...tweets]);
+      setNewTweet("");
+    }
+  };
+
   return (
     <TimelineContainer>
       <Header title="Home" />
@@ -34,6 +41,7 @@ export const Timeline = () => {
             id="tweet"
             placeholder="What's happening?"
             value={newTweet}
+            onKeyDown={handleHotKeySubmit}
             onChange={(event) => setNewTweet(event.target.value)}
           ></textarea>
         </label>
