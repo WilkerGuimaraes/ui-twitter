@@ -12,7 +12,8 @@ export const TweetContainer = styled.div`
     img {
       width: 3rem;
       height: 3rem;
-      border-radius: 9999px;
+      border-radius: 999px;
+      object-fit: cover;
     }
   }
 

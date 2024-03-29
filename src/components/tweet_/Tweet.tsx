@@ -3,9 +3,12 @@ import { ArrowsClockwise, ChatCircle, Heart } from "phosphor-react";
 
 import { TweetContainer } from "./Tweet.style";
 
-import profile9 from "../../assets/profile9.jpg";
+// import profile9 from "../../assets/profile9.jpg";
 
 interface TweetProps {
+  profileName: string;
+  profileUserName: string;
+  profileImage: string;
   content: string;
 }
 
@@ -13,12 +16,12 @@ export const Tweet = (props: TweetProps) => {
   return (
     <TweetContainer>
       <Link to="/status" className="tweet">
-        <img src={profile9} alt="profile2" />
+        <img src={props.profileImage} alt="profile2" />
 
         <div className="tweet-content">
           <div className="tweet-content-header">
-            <strong>John Doe</strong>
-            <span>@johnDoe</span>
+            <strong>{props.profileName}</strong>
+            <span>{props.profileUserName}</span>
           </div>
 
           <p>{props.content}</p>
