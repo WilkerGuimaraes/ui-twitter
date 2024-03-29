@@ -6,6 +6,8 @@ import { Header } from "../../components/header_/Header";
 
 import profile9 from "../../assets/profile9.jpg";
 
+const tweets = ["Meu primeiro tweet", "Teste", "Deu certo tweetar!"];
+
 export const Timeline = () => {
   return (
     <TimelineContainer>
@@ -21,8 +23,9 @@ export const Timeline = () => {
 
       <Separator />
 
-      <Tweet />
-      <Tweet />
+      {tweets.map((tweet) => (
+        <Tweet key={tweet} content={tweet} />
+      ))}
     </TimelineContainer>
   );
 };

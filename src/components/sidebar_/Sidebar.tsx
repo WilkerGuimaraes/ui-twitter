@@ -1,4 +1,4 @@
-import twitterLogo from "../../assets/logo-twitter.svg";
+import { NavLink } from "react-router-dom";
 
 import {
   Bell,
@@ -14,16 +14,18 @@ import {
 
 import { SidebarContainer } from "./Sidebar.style";
 
+import twitterLogo from "../../assets/logo-twitter.svg";
+
 export const Sidebar = () => {
   return (
     <SidebarContainer>
       <img className="logo" src={twitterLogo} alt="twitterLogo" />
 
       <nav className="main-navigation">
-        <a href="/">
-          <House className="active" weight="fill" />
+        <NavLink to="/">
+          <House weight="fill" />
           <span>Home</span>
-        </a>
+        </NavLink>
         <a href="">
           <Hash />
           <span>Explore</span>
