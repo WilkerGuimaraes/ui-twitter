@@ -1,4 +1,5 @@
 import { Content, Layout } from "./app.style";
+import { Header } from "./components/header_/Header";
 import { Sidebar } from "./components/sidebar_/Sidebar";
 
 export const App = () => {
@@ -6,7 +7,7 @@ export const App = () => {
     <Layout>
       <Sidebar />
       <Content>
-        <p>content</p>
+        <Header title="Home" />
       </Content>
     </Layout>
   );
