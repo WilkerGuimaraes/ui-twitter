@@ -17,7 +17,8 @@ export const StatusContainer = styled.main`
       img {
         width: 3rem;
         height: 3rem;
-        border-radius: 9999pc;
+        border-radius: 999px;
+        object-fit: cover;
       }
 
       textarea {
