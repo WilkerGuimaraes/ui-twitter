@@ -58,5 +58,23 @@ export const StatusContainer = styled.main`
         display: none;
       }
     }
+
+    @media (max-width: 780px) {
+      label textarea {
+        font-size: 1rem;
+      }
+
+      button[type="submit"] {
+        padding: 0.75rem;
+
+        svg {
+          display: block;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
   }
 `;

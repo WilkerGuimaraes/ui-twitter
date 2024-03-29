@@ -7,6 +7,10 @@ export const Layout = styled.div`
   height: 100px;
   display: grid;
   grid-template-columns: 300px 1fr;
+
+  @media (max-width: 780px) {
+    grid-template-columns: 80px 1fr;
+  }
 `;
 
 export const Content = styled.div`

@@ -57,4 +57,21 @@ export const SidebarContainer = styled.aside`
       color: var(--twitter-blue);
     }
   }
+
+  @media (max-width: 780px) {
+    padding: 1.5rem 0.75rem;
+    align-items: center;
+
+    .main-navigation span {
+      display: none;
+    }
+
+    .new-tweet span {
+      display: none;
+    }
+
+    .new-tweet svg {
+      display: block;
+    }
+  }
 `;
