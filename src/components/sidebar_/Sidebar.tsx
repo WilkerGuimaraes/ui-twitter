@@ -12,11 +12,11 @@ import {
   User,
 } from "phosphor-react";
 
-import { SidebarStyle } from "./Sidebar.style";
+import { SidebarContainer } from "./Sidebar.style";
 
 export const Sidebar = () => {
   return (
-    <SidebarStyle>
+    <SidebarContainer>
       <img className="logo" src={twitterLogo} alt="twitterLogo" />
 
       <nav className="main-navigation">
@@ -58,6 +58,6 @@ export const Sidebar = () => {
         <Pencil />
         <span>Tweet</span>
       </button>
-    </SidebarStyle>
+    </SidebarContainer>
   );
 };
