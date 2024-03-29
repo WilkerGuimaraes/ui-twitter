@@ -4,6 +4,7 @@ import { Sidebar } from "./components/sidebar_/Sidebar";
 
 import profile9 from "./assets/profile9.jpg";
 import { Separator } from "./components/separator_/Separator";
+import { Tweet } from "./components/tweet_/Tweet";
 
 export const App = () => {
   return (
@@ -21,6 +22,9 @@ export const App = () => {
         </form>
 
         <Separator />
+
+        <Tweet />
+        <Tweet />
       </Content>
     </Layout>
   );
